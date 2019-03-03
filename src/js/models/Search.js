@@ -1,4 +1,5 @@
 import axios from 'axios';
+import * as config from '../config';
 
 export default class Search{
     constructor(query){
@@ -7,8 +8,7 @@ export default class Search{
 
     async getResults() {
         try {
-            const key = 'ece82b660d963590661858bbbbe9badd';
-            const res = await axios(`https://cors-anywhere.herokuapp.com/https://www.food2fork.com/api/search?key=${key}&q=${this.query}`);
+            const res = await axios(`${config.proxy}/https://www.food2fork.com/api/search?key=${config.key}&q=${this.query}`);
             this.result = res.data.recipes;
         }
         catch (e){
