@@ -77,18 +77,21 @@ const controlRecipe = async ()=>{
         try {
             //    Get recipe data
             await state.recipe.getRecipe();
+
+            state.recipe.parseIngredients();
             //     Calculate servings and time
-            state.recipe.calcServings();
             state.recipe.calcTime();
+            state.recipe.calcServings();
             //    Render recipe
             console.log(state.recipe);
         }
         catch (e) {
             alert('Error processing recipe!');
+            console.log(e)
         }
 
     }
 
 }
 
-['haschange', 'load'].forEach(event => window.addEventListener(event,controlRecipe()));
+['hashchange', 'load'].forEach(event => window.addEventListener(event,controlRecipe));
