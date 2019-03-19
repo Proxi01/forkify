@@ -5,9 +5,13 @@ export const elements = {
     searchRes: document.querySelector('.results'),
     searchResPages: document.querySelector('.results__pages'),
     recipe: document.querySelector('.recipe'),
-    shoppin: document.querySelector('.shopping__list'),
+    shopping: document.querySelector('.shopping__list'),
     likesMenu: document.querySelector('.likes__field'),
-    likesList: document.querySelector('.likes__list')
+    likesList: document.querySelector('.likes__list'),
+    productForm: document.querySelector('.shopping__form'),
+    productNum: document.querySelector('.shopping__num'),
+    product: document.querySelector('.shopping__product'),
+    units: document.querySelector('.shopping__unit')
 };
 
 export const elementStrings = {

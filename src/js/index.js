@@ -20,6 +20,8 @@ const state = {}
 /*
     SEARCH CONTROLLER
 */
+window.state = state;
+
 
 const controlSearch = async ()=>{
     //Get query from view
@@ -123,7 +125,7 @@ const controlList = ()=>{
 
 //Handle delete and update list item events
 
-elements.shoppin.addEventListener('click', e=>{
+elements.shopping.addEventListener('click', e=>{
     const id = e.target.closest('.shopping__item').dataset.itemid;
 
 //    Handle delete button
@@ -178,6 +180,9 @@ const controlLike = ()=>{
 
 window.addEventListener('load',()=>{
     state.likes = new Likes();
+    if(!state.list) {
+        state.list = new List();
+    }
 
     //Restore likes
     state.likes.readStorage();
@@ -188,9 +193,15 @@ window.addEventListener('load',()=>{
     state.likes.likes.forEach(like=>{
         likesView.renderLike(like);
     })
+
+    //Restore shopping-list items
+    state.list.readStorage();
+
+    state.list.items.forEach(item=>{
+        listView.renderItem(item);
+    })
+
 })
-
-
 
 
 // Handling recipe button clicks
@@ -217,5 +228,11 @@ elements.recipe.addEventListener('click', e=>{
     }
 });
 
+
+elements.productForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const item = state.list.addItem(parseInt(elements.productNum.value),elements.units.value, elements.product.value);
+    listView.renderItem(item);
+});
 
 

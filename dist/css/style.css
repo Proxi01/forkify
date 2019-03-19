@@ -440,6 +440,53 @@ body {
   padding: 3rem 4rem;
   display: flex;
   flex-direction: column; }
+  .shopping__form{
+    margin-bottom: 10px;
+    width: 100%;  }
+  .shopping__num{
+    padding-left: 5px;
+    -webkit-appearance: none;
+    border: 1px solid orange;
+    height: 3rem;
+    width: 15%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+  .shopping__num:focus{
+    outline: none;  }
+  .shopping__product{
+    padding-left: 5px;
+    border: 1px solid orange;
+    height: 3rem;
+    width: 55%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+  .shopping__product:focus{
+    outline: none;  }
+  .shopping__unit{
+    border: 1px solid orange;
+    height: 3rem;
+    border-radius: 5px;  }
+  .shopping__unit:focus{
+    outline: none;
+  }
+  .shopping__form button{
+    margin-top: 5px;
+    background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+    border-radius: 2rem;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    transition: all .2s;
+    height: 3rem;
+    width: 100%;
+    float: right}
+  .shopping__form button:focus{
+    outline: none;
+  }
   .shopping__list {
     list-style: none;
     max-height: 77rem;
@@ -490,3 +537,10 @@ body {
   .shopping__item:hover .shopping__delete {
     opacity: 1;
     visibility: visible; }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
