@@ -229,10 +229,18 @@ elements.recipe.addEventListener('click', e=>{
 });
 
 
+
 elements.productForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     const item = state.list.addItem(parseInt(elements.productNum.value),elements.units.value, elements.product.value);
     listView.renderItem(item);
+    listView.clearForm();
 });
+elements.shoppingRemove.addEventListener('click',()=>{
+    listView.clearList();
+    state.list.items.forEach(el=>{
+        state.list.deleteItem(el.id, state.list.items.length);
+    })
+})
 
 

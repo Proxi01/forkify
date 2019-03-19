@@ -11,7 +11,8 @@ export const elements = {
     productForm: document.querySelector('.shopping__form'),
     productNum: document.querySelector('.shopping__num'),
     product: document.querySelector('.shopping__product'),
-    units: document.querySelector('.shopping__unit')
+    units: document.querySelector('.shopping__unit'),
+    shoppingRemove: document.querySelector('.shopping__remove-all')
 };
 
 export const elementStrings = {

@@ -20,10 +20,10 @@ export default class List{
         return item;
     }
 
-    deleteItem(id){
+    deleteItem(id, count=1){
         const index = this.items.findIndex(el=>el.id === id);
 
-        this.items.splice(index, 1);
+        this.items.splice(index, count);
 
         //Save storage
         this.persistData();

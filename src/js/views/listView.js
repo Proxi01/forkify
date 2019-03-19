@@ -22,3 +22,14 @@ export const deleteItem = id =>{
     const item = document.querySelector(`[data-itemid="${id}"]`);
     item.parentElement.removeChild(item);
 };
+
+export const clearForm = () =>{
+    elements.productNum.value = '';
+    elements.product.value = '';
+    elements.units.value = '';
+    elements.productNum.focus();
+};
+
+export const clearList = ()=>{
+    elements.shopping.innerHTML='';
+}
