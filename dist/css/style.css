@@ -471,7 +471,7 @@ body {
   .shopping__unit:focus{
     outline: none;
   }
-  .shopping__form button{
+  .shopping__submit-button{
     margin-top: 5px;
     background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
     border-radius: 2rem;
@@ -484,13 +484,26 @@ body {
     height: 3rem;
     width: 100%;
     float: right}
-  .shopping__form button:focus{
-    outline: none;
-  }
+  .shopping__submit-button:focus{
+    outline: none;  }
+  .shopping__remove-all{
+    margin-top: 5px;
+    background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+    border-radius: 2rem;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    transition: all .2s;
+    height: 3rem;
+    width: 100%;  }
+  .shopping__remove-all:focus{
+    outline:none;  }
   .shopping__list {
     list-style: none;
     max-height: 77rem;
-    overflow-y: scroll; }
+    overflow-y: auto; }
   .shopping__item {
     display: flex;
     align-items: flex-start;

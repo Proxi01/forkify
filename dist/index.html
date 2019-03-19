@@ -343,6 +343,20 @@
 
         <div class="shopping">
             <h2 class="heading-2">My Shopping List</h2>
+            <form class="shopping__form">
+                <input type="number" class="shopping__num">
+                <select class="shopping__unit">
+                    <option value=""></option>
+                    <option value="tbsp">tbsp</option>
+                    <option value="oz">oz</option>
+                    <option value="tsp">tsp</option>
+                    <option value="cup">cup</option>
+                    <option value="pound">pound</option>
+                </select>
+                <input type="text" class="shopping__product">
+                <button type="submit" class="shopping__submit-button">Add</button>
+                <button type="button" class="shopping__remove-all">Remove all</button>
+            </form>
 
             <ul class="shopping__list">
 
